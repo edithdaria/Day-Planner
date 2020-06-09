@@ -3,7 +3,7 @@ $(Document).ready(function(){
 
     
     var plannedEventToObject = JSON.parse(localStorage.getItem("storeEvent"));
-    //alert(plannedEventToObject[(businessHours)[i]]);
+    alert(plannedEventToObject[(businessHours)[i]]);
 
     
     //display the current date and time at the top of the calendar
@@ -66,11 +66,12 @@ $(Document).ready(function(){
     li.text(arrayVal).appendTo(containerDiv);
 
     //input div
-    var description = $("<textarea>").text(plannedEventToObject[(businessHours)[i]]).addClass("col-md-6 col-sm-6 col-xs-6 description textarea").attr("data-index", i).appendTo(containerDiv);
-    
+    var text_value = "";
+    if (plannedEventToObject) text_value = plannedEventToObject[(businessHours)[i]];
+    var description = $("<textarea>").text(text_value).addClass("col-md-6 col-sm-6 col-xs-6 description textarea").attr("data-index", i).appendTo(containerDiv);
+
     //button div
     var button = $("<button>").addClass("col-md-3 col-sm-3 col-xs-3 saveBtn").text("save").attr("data-index", i).appendTo(containerDiv);
-
 
     //.html("<img src='save.jpg'>")
      
