@@ -2,10 +2,7 @@
 $(Document).ready(function(){
 
     
-    var plannedEventToObject = JSON.parse(localStorage.getItem("storeEvent"));
-    //alert(plannedEventToObject[(businessHours)[i]]);
-
-    
+        
     //display the current date and time at the top of the calendar
     function updateTime(){
 
@@ -31,6 +28,10 @@ $(Document).ready(function(){
     //alert(Object.values(businessHours)[0]);
 
      var current = moment(moment(), 'hh:mm').format("ha");
+
+     var plannedEventToObject = JSON.parse(localStorage.getItem("storeEvent"));
+    //alert(plannedEventToObject[(businessHours)[i]]);
+
 
 
 
