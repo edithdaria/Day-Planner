@@ -3,7 +3,7 @@ $(Document).ready(function(){
 
     
     var plannedEventToObject = JSON.parse(localStorage.getItem("storeEvent"));
-    alert(plannedEventToObject[(businessHours)[i]]);
+    //alert(plannedEventToObject[(businessHours)[i]]);
 
     
     //display the current date and time at the top of the calendar
