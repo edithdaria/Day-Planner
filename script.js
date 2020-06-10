@@ -1,5 +1,5 @@
 //wait until the full html page is rendered to run the js
-$(Document).ready(function(){
+$(function(){
 
     
         
@@ -33,22 +33,9 @@ $(Document).ready(function(){
     //alert(plannedEventToObject[(businessHours)[i]]);
 
 
-
-
     // for(var i=0; i < Object.keys(businessHours).length; i++ ){
     for(var i=0; i < businessHours.length; i++ ){
 
-    //  var formattedTime = [];     
-    //  formattedTime[i] = moment((businessHours[i]), "hmm").format("ha");
-    //  if(formattedTime[0] == "8am"){         
-    //     alert(true);
-    // }
-    // alert(formattedTime[i]);
-
-    //compare current time to calendar time and will be used for color coding
-     // alert(beginningTime);
-    // alert(endTime);    
-    //alert(beginningTime.isBefore(endTime));
 
     var currentTime = moment(current, 'ha');
     //var plannerTime = moment(Object.keys(businessHours)[i], 'ha');
@@ -72,9 +59,10 @@ $(Document).ready(function(){
     var description = $("<textarea>").text(text_value).addClass("col-md-6 col-sm-6 col-xs-6 description textarea").attr("data-index", i).appendTo(containerDiv);
 
     //button div
-    var button = $("<button>").addClass("col-md-3 col-sm-3 col-xs-3 saveBtn").text("save").attr("data-index", i).appendTo(containerDiv);
+    var button = $("<button>").addClass("col-md-3 col-sm-3 col-xs-3 saveBtn").html("<i class='icon-save'></i>").attr("data-index", i).appendTo(containerDiv);
 
     //.html("<img src='save.jpg'>")
+   //.html("<i class='icon-save'></i>")
      
 
      if(currentTime.isAfter(plannerTime)){
